@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Widget formEnterData(TextEditingController controller) {
+Widget textFormField(TextEditingController controller) {
   return Form(
     child: TextFormField(
       controller: controller,

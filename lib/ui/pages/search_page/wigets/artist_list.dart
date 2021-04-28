@@ -1,12 +1,14 @@
-import 'package:artists_app/repository/models/artist_model.dart';
+
+
+import 'package:artists_app/data/models/artist_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-class ListArtist extends StatelessWidget {
+class ArtistList extends StatelessWidget {
    List <ArtistModel> listArtist;
 
-  ListArtist(
+   ArtistList(
       {Key key, this.listArtist})
       : super(key: key);
 

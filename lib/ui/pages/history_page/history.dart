@@ -1,7 +1,8 @@
 
 
-import 'package:artists_app/ui/history_page/widgets/load_data_list.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:artists_app/data/repository/firestore_repository/repository_firestore.dart';
+import 'package:artists_app/ui/pages/history_page/widgets/history_artist_list.dart';
+
 import 'package:flutter/material.dart';
 
 class HistoryPage extends StatelessWidget {
@@ -22,8 +23,8 @@ class HistoryPage extends StatelessWidget {
           ),
         ),
         body: StreamBuilder (
-          stream:FirebaseFirestore.instance.collection('artistsdata').snapshots() ,
-          builder: loadArtistList,
+          stream: RepositoryFirestore().collectionReference(),
+          builder: historyArtistList,
         )
     );
   }
